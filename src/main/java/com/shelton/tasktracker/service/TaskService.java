@@ -24,7 +24,7 @@ public class TaskService {
 							.completed(taskTO.getCompleted())
 							.build();
 							
-							
+			
 			taskRepository.save(task);
 			
 		} catch (Exception e) {
