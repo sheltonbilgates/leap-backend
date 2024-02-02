@@ -25,12 +25,15 @@ public class TaskService {
 							.build();
 							
 			
-			taskRepository.save(task);
+			Task savedTask = taskRepository.save(task);
+			return "Task created successfully with ID: " + savedTask.getId();
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
+			return "Error creating task";
 		}
-		return "Task Created Succesfully";
+
 	}
 public List<Task> getTasks(){
 	List<Task> taskList = new ArrayList<>();
