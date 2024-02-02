@@ -51,13 +51,13 @@ public String deleteTasks(String id) {
 }
 public String updateTask(TaskTO task) {
 	try {
-		Task tasks = Task.builder()
+		Task task2 = Task.builder()
 						.id(task.getId())
 						.description(task.getDescription())
 						.duedate(task.getDuedate())
 						.completed(task.getCompleted())
 						.build();
-		taskRepository.save(tasks);
+		taskRepository.save(task2);
 	} catch (Exception e) {
 		// TODO: handle exception
 	}
